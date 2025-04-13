@@ -53,3 +53,43 @@ NikeKicks/
 ├── style.css                # All site-wide styles
 └── README.md                # (To be created using the below content)
 ```
+
+---
+
+## Setup & Installation ⚙️
+
+### 1. Clone repository
+```bash
+git clone https://github.com/yourusername/nike-ecommerce-store.git
+cd nike-ecommerce-store
+```
+
+### 2. Install dependencies
+```
+npm install -g json-server
+npm install axios
+```
+
+### 3. Start JSON Server
+Create db.json with initial data:
+```
+{
+  "payments": []
+}
+```
+Start server:
+```
+json-server --watch db.json --port 3000
+```
+
+### 4. Run the Application
+```
+Open index.html in your browser
+```
+
+## Testing 🧪
+1. Add products to cart
+
+2. Proceed to checkout
+
+3. Use test payment details:
