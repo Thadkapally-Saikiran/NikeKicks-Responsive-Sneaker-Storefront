@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!-- Declares this is an HTML5 document -->
+<html lang="en">
+  <!-- Start of the HTML document with language set to English -->
+  <head>
+    <!-- Metadata and links for the document -->
+    <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8 for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configures the viewport for responsive design on mobile devices -->
+    <title>Nike franchise Saikiran Store</title>
+    <!-- Title of the webpage shown in browser tabs -->
+    <!-- Google Fonts: Importing the Lato font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to the common CSS file for styling -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Inline CSS for extra navigation buttons styling -->
+    <style>
+      /* Extra styling for the additional navigation section */
+      .navExtra {
+        display: flex;             /* Use flexbox for layout */
+        gap: 20px;                 /* Space items 20px apart */
+        justify-content: flex-end; /* Align items to the right */
+        padding-right: 50px;       /* Right padding for spacing */
+        align-items: center;       /* Center items vertically */
+      }
+      .navExtra a {
+        color: white;              /* White text for links */
+        text-decoration: none;     /* Remove underline from links */
+        font-weight: bold;         /* Bold text styling */
+        background-color: #369e62; /* Background color for buttons */
+        padding: 8px 12px;         /* Padding inside the buttons */
+        border-radius: 4px;        /* Rounded corners */
+      }
+      .navExtra a:hover {
+        background-color: #2c7d51; /* Darker background on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Beginning of the main body content -->
+    <!-- Navigation Bar -->
+    <nav id="nav">
+      <!-- Top portion of navigation -->
+      <div class="navTop">
+        <!-- Navigation item: Store Logo -->
+        <div class="navItem">
+          <img src="./img/sneakers.png" alt="Store Logo" />
+          <!-- Displays the store logo image -->
+        </div>
+        <!-- Navigation item: Search bar -->
+        <div class="navItem">
+          <div class="search">
+            <!-- Text input for search queries -->
+            <input type="text" placeholder="Search..." class="searchInput" />
+            <!-- Search icon image -->
+            <img
+              src="./img/search.png"
+              width="20"
+              height="20"
+              alt="Search Icon"
+              class="searchIcon"
+            />
+          </div>
+        </div>
+        <!-- Navigation extra: Additional links (Cart & Orders) -->
+        <div class="navExtra">
+          <!-- Link to the cart page -->
+          <a href="cart.html">Cart</a>
+          <!-- Link to the orders page -->
+          <a href="order.html">My Orders</a>
+        </div>
+        <!-- Navigation item: Limited offer announcement -->
+        <div class="navItem">
+          <span class="limitedOffer">Limited Offer!</span>
+        </div>
+      </div>
+      <!-- Bottom portion of navigation containing the menu items -->
+      <div class="navBottom">
+        <!-- Each h3 element here functions as a clickable menu item -->
+        <h3 class="menuItem">AIR FORCE</h3>
+        <h3 class="menuItem">JORDAN</h3>
+        <h3 class="menuItem">BLAZER</h3>
+        <h3 class="menuItem">CRATER</h3>
+        <h3 class="menuItem">HIPPIE</h3>
+      </div>
+    </nav>
+
+    <!-- Slider Section: Contains sliding promotional items -->
+    <div class="slider">
+      <!-- Wrapper for all slider items (will be moved via transform) -->
+      <div class="sliderWrapper">
+        <!-- First slider item: Air Force -->
+        <div class="sliderItem">
+          <!-- Product image -->
+          <img src="./img/air.png" alt="Air Force" class="sliderImg" />
+          <!-- Decorative background circle -->
+          <div class="sliderBg"></div>
+          <!-- Slider title with line break -->
+          <h1 class="sliderTitle">AIR FORCE<br />NEW SEASON</h1>
+          <!-- Slider price -->
+          <h2 class="sliderPrice">$119</h2>
+          <!-- Call-to-action: Button linking to the product section -->
+          <a href="#product">
+            <button class="buyButton">BUY NOW!</button>
+          </a>
+        </div>
+        <!-- Second slider item: Air Jordan -->
+        <div class="sliderItem">
+          <img src="./img/jordan.png" alt="Air Jordan" class="sliderImg" />
+          <div class="sliderBg"></div>
+          <h1 class="sliderTitle">AIR JORDAN<br />NEW SEASON</h1>
+          <h2 class="sliderPrice">$149</h2>
+          <a href="#product">
+            <button class="buyButton">BUY NOW!</button>
+          </a>
+        </div>
+        <!-- Third slider item: Blazer -->
+        <div class="sliderItem">
+          <img src="./img/blazer.png" alt="Blazer" class="sliderImg" />
+          <div class="sliderBg"></div>
+          <h1 class="sliderTitle">BLAZER<br />NEW SEASON</h1>
+          <h2 class="sliderPrice">$109</h2>
+          <a href="#product">
+            <button class="buyButton">BUY NOW!</button>
+          </a>
+        </div>
+        <!-- Fourth slider item: Crater -->
+        <div class="sliderItem">
+          <img src="./img/crater.png" alt="Crater" class="sliderImg" />
+          <div class="sliderBg"></div>
+          <h1 class="sliderTitle">CRATER<br />NEW SEASON</h1>
+          <h2 class="sliderPrice">$129</h2>
+          <a href="#product">
+            <button class="buyButton">BUY NOW!</button>
+          </a>
+        </div>
+        <!-- Fifth slider item: Hippie -->
+        <div class="sliderItem">
+          <img src="./img/hippie.png" alt="Hippie" class="sliderImg" />
+          <div class="sliderBg"></div>
+          <h1 class="sliderTitle">HIPPIE<br />NEW SEASON</h1>
+          <h2 class="sliderPrice">$99</h2>
+          <a href="#product">
+            <button class="buyButton">BUY NOW!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Section: Displays details for the selected product -->
+    <div class="product" id="product">
+      <!-- Main product image -->
+      <img src="./img/air.png" alt="Product" class="productImg" />
+      <!-- Container for product text details -->
+      <div class="productDetails">
+        <!-- Product title -->
+        <h1 class="productTitle">AIR FORCE</h1>
+        <!-- Product price -->
+        <h2 class="productPrice">$119</h2>
+        <!-- Placeholder for product description (populated dynamically) -->
+        <p class="productDesc"></p>
+        <!-- Container where color options will be added dynamically -->
+        <div class="colors"></div>
+        <!-- Size selection options -->
+        <div class="sizes">
+          <div class="size">42</div>
+          <div class="size">43</div>
+          <div class="size">44</div>
+        </div>
+        <!-- Button group for actions: Buy Now and Add to Cart -->
+        <div class="buttons-group">
+          <button class="productButton">Buy Now!</button>
+          <button class="addToCartButton">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Payment Modal: Hidden until triggered -->
+      <div class="payment">
+        <!-- Section title for personal information -->
+        <h1 class="payTitle">Personal Information</h1>
+        <!-- Label and input for name -->
+        <label>Name and Surname</label>
+        <input type="text" placeholder="John Doe" class="payInput" />
+        <!-- Label and input for phone number -->
+        <label>Phone Number</label>
+        <input type="text" placeholder="+1 234 5678" class="payInput" />
+        <!-- Label and input for address -->
+        <label>Address</label>
+        <input type="text" placeholder="Elton St 21 22-145" class="payInput" />
+        <!-- Section title for card information -->
+        <h1 class="payTitle">Card Information</h1>
+        <!-- Icons representing accepted card types -->
+        <div class="cardIcons">
+          <img src="./img/visa.png" width="40" alt="Visa" class="cardIcon" />
+          <img src="./img/master.png" width="40" alt="Mastercard" class="cardIcon" />
+        </div>
+        <!-- Input field for card number (hidden characters) -->
+        <input type="password" placeholder="Card Number" class="payInput" />
+        <!-- Container for card expiry month, year, and CVV -->
+        <div class="cardInfo">
+          <input type="text" placeholder="mm" class="payInput sm" />
+          <input type="text" placeholder="yyyy" class="payInput sm" />
+          <input type="text" placeholder="cvv" class="payInput sm" />
+        </div>
+        <!-- Button to trigger the checkout process -->
+        <button class="payButton">Checkout!</button>
+        <!-- Button to close the payment modal -->
+        <span class="close">X</span>
+      </div>
+    </div>
+
+    <!-- Footer can be added here if needed -->
+    <!-- Including Axios from a CDN for making HTTP requests -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Link to custom JavaScript file for this page -->
+    <script src="index.js"></script>
+  </body>
+</html>

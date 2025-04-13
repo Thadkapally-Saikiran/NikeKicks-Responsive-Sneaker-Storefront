@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Document type declaration -->
+<html lang="en">
+  <head>
+    <!-- Head section containing metadata -->
+    <meta charset="UTF-8" />
+    <!-- Character encoding set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Responsive design meta tag -->
+    <title>Payment Successful</title>
+    <!-- Title of the page -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to external CSS file for styling -->
+    <style>
+      /* Styling for the success page container */
+      .success-container {
+        display: flex;                 /* Use flexbox to center content */
+        flex-direction: column;        /* Stack items vertically */
+        align-items: center;           /* Center items horizontally */
+        justify-content: center;       /* Center items vertically */
+        height: 100vh;                 /* Full viewport height */
+        background: #f0fff0;           /* Light greenish background */
+      }
+      .success-container h1 {
+        color: #369e62;                /* Green color for headline */
+        font-size: 3rem;               /* Large text size */
+      }
+      .success-container a {
+        margin-top: 20px;              /* Space above the link buttons */
+        padding: 10px 20px;            /* Padding inside links */
+        background-color: #369e62;     /* Green background for button links */
+        color: white;                  /* White text */
+        text-decoration: none;         /* Remove underline */
+        border-radius: 5px;            /* Rounded corners */
+      }
+      .success-container a:hover {
+        background-color: #2c7d51;     /* Darker green on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main container for payment success message -->
+    <div class="success-container">
+      <h1>Payment Successful!</h1>
+      <!-- Primary success heading -->
+      <p>Thank you for your purchase.</p>
+      <!-- Thank you message -->
+      <a href="index.html">Back to Home</a>
+      <!-- Link to return to the homepage -->
+      <a href="order.html" style="margin-top: 10px;">View Orders</a>
+      <!-- Link to view order history with additional margin -->
+    </div>
+  </body>
+</html>

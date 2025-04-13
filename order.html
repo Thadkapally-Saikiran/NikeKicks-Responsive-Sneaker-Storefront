@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Declares the document as an HTML5 file -->
+<html lang="en">
+  <!-- Set the language attribute to English -->
+  <head>
+    <!-- Head element containing metadata and styling information -->
+    <meta charset="UTF-8" />
+    <!-- Use UTF-8 character encoding for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling on mobile devices -->
+    <title>My Orders</title>
+    <!-- Sets the page title to be shown in the browser tab -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Links to the common CSS stylesheet for overall site styling -->
+    <style>
+      /* Local inline styles specific to the Orders page */
+      
+      /* Order container: centers the content and sets a max-width */
+      .order-container {
+        padding: 20px;         /* Adds padding around the container */
+        max-width: 800px;       /* Limits container width to 800px */
+        margin: auto;           /* Centers the container horizontally */
+      }
+      
+      /* Each order item container styling */
+      .order-item {
+        display: flex;                    /* Use flexbox to arrange inner content */
+        justify-content: space-between;   /* Space out order details and button */
+        align-items: center;              /* Vertically center items in the row */
+        padding: 15px;                    /* Add internal spacing */
+        margin-bottom: 10px;              /* Space between order items */
+        border: 1px solid #ccc;           /* Light grey border for separation */
+        border-radius: 5px;               /* Rounded corners */
+        background: #fff;                 /* White background for clear contrast */
+      }
+      
+      /* Allows child divs inside an order-item to expand equally */
+      .order-item div {
+        flex: 1;
+      }
+      
+      /* Container for the action buttons (delete, etc.) */
+      .action-buttons {
+        display: flex;  /* Display buttons in a row */
+        gap: 10px;      /* Gap of 10px between each button */
+      }
+      
+      /* Styling for the remove button */
+      .delete-btn {
+        padding: 5px 10px;           /* Padding inside the button for better click area */
+        background: #ff4d4d;          /* Red background signifies deletion action */
+        color: white;                /* White text for contrast */
+        border: none;                /* Remove default border */
+        border-radius: 5px;          /* Rounded corners for aesthetics */
+        cursor: pointer;             /* Cursor changes to pointer on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main body of the Orders page -->
+    <header>
+      <!-- Header element containing the page heading -->
+      <h1 style="text-align: center;">My Orders</h1>
+      <!-- Centered heading for the orders page -->
+    </header>
+    <!-- Container where order details will be injected by JavaScript -->
+    <div class="order-container" id="orderContainer">
+      <!-- The orders will be dynamically rendered into this container -->
+    </div>
+    <!-- Include Axios library from CDN for making HTTP requests -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Link to the external JavaScript file handling Orders page functionality -->
+    <script src="order.js"></script>
+  </body>
+</html>

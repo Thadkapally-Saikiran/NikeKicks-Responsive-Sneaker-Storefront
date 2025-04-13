@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Declares the document as HTML5 -->
+<html lang="en">
+  <!-- Sets the primary language of the document to English -->
+  <head>
+    <!-- Header section with meta information and styles -->
+    <meta charset="UTF-8" />
+    <!-- Use UTF-8 character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensure proper scaling on mobile devices -->
+    <title>My Cart</title>
+    <!-- Title of the page -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to common CSS styles for consistent look across pages -->
+    <style>
+      /* Local inline styles specific to the cart page */
+      .cart-container {
+        max-width: 800px;  /* Maximum width for the cart container */
+        margin: auto;      /* Center the container horizontally */
+        padding: 20px;     /* Add padding around the container */
+      }
+      .cart-item {
+        display: flex;                      /* Use flexbox for layout */
+        justify-content: space-between;     /* Space out elements along the horizontal axis */
+        align-items: center;                /* Vertically center the content */
+        padding: 15px;                      /* Padding for internal spacing */
+        margin-bottom: 10px;                /* Spacing between individual cart items */
+        border: 1px solid #ccc;             /* Light border around each item */
+        border-radius: 5px;                 /* Rounded corners */
+        background: #fff;                   /* White background color */
+      }
+      .cart-item div {
+        flex: 1;  /* Allow child divs to take equal space if needed */
+      }
+      .action-buttons {
+        display: flex;   /* Arrange action buttons horizontally */
+        gap: 10px;       /* Set a 10px gap between buttons */
+      }
+      .remove-cart-btn,
+      .edit-cart-btn {
+        padding: 5px 10px;      /* Padding for the buttons */
+        color: white;           /* White text color */
+        border: none;           /* Remove default border */
+        border-radius: 5px;     /* Rounded button corners */
+        cursor: pointer;        /* Change cursor on hover to indicate clickability */
+      }
+      .remove-cart-btn {
+        background: #ff4d4d;    /* Red background for remove button */
+      }
+      .edit-cart-btn {
+        background: #369e62;    /* Green background for edit button */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main body of the Cart page -->
+    <header>
+      <!-- Header section to display the page title -->
+      <h1 style="text-align: center;">My Cart</h1>
+      <!-- Centered title text -->
+    </header>
+    <!-- Container where cart items will be dynamically rendered -->
+    <div class="cart-container" id="cartContainer">
+      <!-- Cart items get inserted here via JavaScript -->
+    </div>
+    <!-- Link to the cart JavaScript file which handles dynamic cart functionality -->
+    <script src="cart.js"></script>
+  </body>
+</html>

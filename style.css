@@ -1,0 +1,685 @@
+/* Enable smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global body styling */
+body {
+  font-family: "Lato", sans-serif;
+  /* Sets the primary font */
+  padding: 0;
+  /* Removes default padding */
+  margin: 0;
+  /* Removes default margin */
+}
+
+/* Styling for the navigation bar */
+nav {
+  background-color: #111;
+  /* Dark background color for contrast */
+  color: white;
+  /* White text color */
+  padding: 20px 50px;
+  /* Padding around the nav content */
+}
+
+/* Top section of navigation (logo, search, etc.) */
+.navTop {
+  display: flex;
+  /* Horizontal layout using flexbox */
+  align-items: center;
+  /* Vertically center items */
+  justify-content: space-between;
+  /* Place items at the ends of the container */
+}
+
+/* Styling for the search container */
+.search {
+  display: flex;
+  /* Flex layout for input and icon */
+  align-items: center;
+  /* Align items vertically */
+  background-color: gray;
+  /* Gray background for the search bar */
+  padding: 10px 20px;
+  /* Padding inside the search bar */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+/* Styling the search input field */
+.searchInput {
+  border: none;
+  /* Remove the default border */
+  background-color: transparent;
+  /* Transparent background */
+}
+
+/* Placeholder styling for the search input */
+.searchInput::placeholder {
+  color: lightgray;
+  /* Light gray text for placeholder */
+}
+
+/* Limited offer text styling */
+.limitedOffer {
+  font-size: 20px;
+  /* Increase font size */
+  border-bottom: 2px solid green;
+  /* Underline effect in green */
+  cursor: pointer;
+  /* Indicate that the element is clickable */
+}
+
+/* Bottom navigation styling */
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Center the menu items horizontally */
+}
+
+/* Styling for each menu item */
+.menuItem {
+  margin-right: 50px;
+  /* Spacing between menu items */
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+  color: lightgray;
+  /* Light text color for menu items */
+  font-weight: 400;
+  /* Normal font weight */
+}
+
+/* Slider container styling */
+.slider {
+  background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+  /* Background image for the slider */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  /* Creates an angled lower boundary */
+  overflow: hidden;
+  /* Ensures content does not overflow the clipped container */
+}
+
+/* Wrapper that holds all slider items */
+.sliderWrapper {
+  display: flex;
+  /* Arrange slider items in a row */
+  width: 500vw;
+  /* Width to hold 5 items (each 100vw) */
+  transition: all 1.5s ease-in-out;
+  /* Smooth animation for slider transition */
+}
+
+/* Individual slider items styling */
+.sliderItem {
+  width: 100vw;
+  /* Each item takes full viewport width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Center content within each slider item */
+  position: relative;
+  /* Allows for absolute positioning of inner elements */
+}
+
+/* Background circle styling for slider items */
+.sliderBg {
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  /* Creates a perfect circle */
+  position: absolute;
+  /* Positioned relative to .sliderItem */
+}
+
+/* Slider image styling */
+.sliderImg {
+  z-index: 1;
+  /* Place image above the background circle */
+}
+
+/* Slider title styling and positioning */
+.sliderTitle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+/* Slider price styling and positioning */
+.sliderPrice {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  border: 1px solid gray;
+  z-index: 1;
+}
+
+/* Styling for the buy button within the slider */
+.buyButton {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  border: 1px solid gray;
+  background-color: black;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Hover effect for the buy button */
+.buyButton:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Specific background colors for each slider item's background circle */
+.sliderItem:nth-child(1) .sliderBg {
+  background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderBg {
+  background-color: rebeccapurple;
+}
+.sliderItem:nth-child(3) .sliderBg {
+  background-color: teal;
+}
+.sliderItem:nth-child(4) .sliderBg {
+  background-color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderBg {
+  background-color: rgb(124, 115, 80);
+}
+
+/* Adjust text color of slider prices for each item */
+.sliderItem:nth-child(1) .sliderPrice {
+  color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderPrice {
+  color: white;
+}
+.sliderItem:nth-child(3) .sliderPrice {
+  color: teal;
+}
+.sliderItem:nth-child(4) .sliderPrice {
+  color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderPrice {
+  color: cornsilk;
+}
+
+/* Features section styling */
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+/* Styling individual feature block */
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Feature icon dimensions */
+.featureIcon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Feature title styling */
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+/* Feature description styling */
+.featureDesc {
+  color: gray;
+  width: 50%;
+  height: 100px;
+}
+
+/* Product page styling */
+.product {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Payment modal styling */
+.payment {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  /* Hidden by default */
+  flex-direction: column;
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Payment modal title styling */
+.payTitle {
+  font-size: 20px;
+  color: lightgray;
+}
+
+/* Label styling for form fields */
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* Payment input field styling */
+.payInput {
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+/* Placeholder styling in payment inputs */
+.payInput::placeholder {
+  color: rgb(163, 163, 163);
+}
+
+/* Container for card icons */
+.cardIcons {
+  display: flex;
+}
+
+/* Styling for individual card icons */
+.cardIcon {
+  margin-right: 10px;
+}
+
+/* Container for card expiry and CVV inputs */
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Small input fields for expiry and CVV */
+.sm {
+  width: 30%;
+}
+
+/* Checkout button styling in payment modal */
+.payButton {
+  position: absolute;
+  height: 40px;
+  bottom: -40px;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  background-color: #369e62;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Close button styling for the modal */
+.close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+
+/* Product image styling */
+.productImg {
+  width: 50%;
+}
+
+/* Container for product details */
+.productDetails {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+
+/* Product title styling */
+.productTitle {
+  font-size: 75px;
+  font-weight: 900;
+}
+
+/* Product description styling */
+.productDesc {
+  font-size: 24px;
+  color: gray;
+}
+
+/* Layout styling for color and size options */
+.colors,
+.sizes {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Styling each color option */
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Size option styling */
+.sizes .size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Styling for product action buttons */
+.productButton,
+.addToCartButton {
+  float: right;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Hover effects for action buttons */
+.productButton:hover,
+.addToCartButton:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Gallery section styling */
+.gallery {
+  padding: 50px;
+  display: flex;
+}
+
+/* Styling for individual gallery items */
+.galleryItem {
+  flex: 1;
+  padding: 50px;
+}
+
+/* Gallery image styling */
+.galleryImg {
+  width: 100%;
+}
+
+/* New Season section styling */
+.newSeason {
+  display: flex;
+}
+
+/* New Season item styling */
+.nsItem {
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styling for new season images */
+.nsImg {
+  width: 100%;
+  height: 500px;
+}
+
+/* New season title styling */
+.nsTitle {
+  font-size: 40px;
+}
+
+/* New season button styling */
+.nsButton {
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Footer container styling */
+footer {
+  display: flex;
+}
+
+/* Styling for the left section of the footer */
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+/* Footer menu title styling */
+.fMenuTitle {
+  font-size: 16px;
+}
+
+/* Footer list styling */
+.fList {
+  padding: 0;
+  list-style: none;
+}
+
+/* Footer list items styling */
+.fListItem {
+  margin-bottom: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+/* Styling for the right section of the footer */
+.footerRight {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Footer input styling */
+.fInput {
+  padding: 5px;
+}
+
+/* Footer button styling */
+.fButton {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+/* Container for footer icons */
+.fIcons {
+  display: flex;
+}
+
+/* Individual footer icon styling */
+.fIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Copyright text styling */
+.copyright {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* Responsive design: Adjustments for devices with a maximum width of 480px */
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 20px;
+  }
+
+  .search {
+    display: none;
+    /* Hide search bar on small screens */
+  }
+
+  .navBottom {
+    flex-wrap: wrap;
+    /* Allow menu items to wrap to the next line */
+  }
+
+  .menuItem {
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    /* Increase visibility of menu items on mobile */
+  }
+
+  .slider {
+    clip-path: none;
+    /* Remove clip path for simpler layout on small screens */
+  }
+
+  .sliderImg {
+    width: 90%;
+    /* Scale slider images down */
+  }
+
+  .sliderBg {
+    width: 100%;
+    height: 100%;
+    /* Adjust background circle to fill available space */
+  }
+
+  .sliderTitle {
+    display: none;
+    /* Hide slider title on small screens */
+  }
+
+  .sliderPrice {
+    top: unset;
+    bottom: -50px;
+    left: 0;
+    background-color: lightgrey;
+    /* Adjust position and background of slider price for mobile */
+  }
+
+  .buyButton {
+    right: 0;
+    top: 0;
+    /* Reposition buy button */
+  }
+
+  .features {
+    flex-direction: column;
+    /* Stack feature items vertically */
+  }
+
+  .product {
+    clip-path: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Adjust product section layout for mobile */
+  }
+
+  .productImg {
+    width: 80%;
+    /* Scale product image down */
+  }
+
+  .productDetails {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+    /* Adjust product details layout for mobile view */
+  }
+
+  .productTitle {
+    font-size: 50px;
+    margin: 0;
+    /* Reduce product title size on mobile */
+  }
+
+  .gallery {
+    display: none;
+    /* Hide gallery on small screens */
+  }
+
+  .newSeason {
+    flex-direction: column;
+    /* Stack new season items vertically */
+  }
+
+  .nsItem:nth-child(2) {
+    padding: 50px;
+    /* Additional padding for the second new season item */
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    /* Stack footer sections on mobile */
+  }
+
+  .footerLeft {
+    padding: 20px;
+    width: 90%;
+    /* Adjust footer left section width and padding */
+  }
+
+  .footerRight {
+    padding: 20px;
+    width: 90%;
+    align-items: center;
+    background-color: whitesmoke;
+    /* Style footer right section for mobile */
+  }
+
+  .payment {
+    width: 90%;
+    padding: 20px;
+    /* Adjust payment modal size for mobile devices */
+  }
+}
