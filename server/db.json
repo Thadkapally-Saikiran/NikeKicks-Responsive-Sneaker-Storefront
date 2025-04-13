@@ -1,3 +1,25 @@
 {
-  "payments": []
+  "payments": [
+    {
+      "id": "a842",
+      "customer": {
+        "name": "Vamnis",
+        "phone": "+91-7674897867",
+        "address": "Ellon Street 123"
+      },
+      "cardInfo": {
+        "cardNumber": "1234567891020344",
+        "expiryMonth": "02",
+        "expiryYear": "2000",
+        "cvv": "125"
+      },
+      "product": {
+        "title": "AIR FORCE",
+        "price": "$119",
+        "image": "http://127.0.0.1:5500/img/air.png",
+        "size": "Not selected"
+      },
+      "date": "2025-04-13T10:06:44.236Z"
+    }
+  ]
 }
