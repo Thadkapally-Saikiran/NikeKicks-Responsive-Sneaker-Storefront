@@ -23,7 +23,7 @@ Welcome to **NikeKicks**, a stylish and responsive eCommerce frontend project th
 - Axios
 - JSON Server (Local REST API)
 
-📌 Use Case
+##📌 Use Case
 This project is ideal for showcasing:
 
 - Frontend development skills
