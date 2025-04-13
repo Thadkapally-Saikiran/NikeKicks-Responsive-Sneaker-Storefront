@@ -89,7 +89,28 @@ Open index.html in your browser
 
 ## Testing 🧪
 1. Add products to cart
-
 2. Proceed to checkout
-
 3. Use test payment details:
+   - Card: 4242 4242 4242 4242
+   - Date: Any future date
+   - CVV: Any 3 digits
+
+## Important Notes:
+1. Replace image paths in HTML/CSS files according to your actual image locations
+2. Add proper product images to the img/ directory
+3. For real deployment, you'd want to:
+   - Add proper error handling
+   - Implement actual payment gateway
+   - Add user authentication
+   - Set up proper database
+   - Add more product details
+
+
+
+
+
+
+
+
+
+
