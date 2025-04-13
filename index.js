@@ -234,18 +234,18 @@ payButton.addEventListener("click", () => {
 
   // Use Axios to POST the paymentData to the JSON server endpoint.
   axios
-    .post("http://localhost:3000/payments", paymentData)
-    .then((response) => {
-      // If the server responds successfully, alert the user.
-      alert("Payment Successful!");
-      // Redirect the user to a payment success page.
-      window.location.href = "payment_success.html";
-    })
-    .catch((error) => {
-      // Log the error if the payment request fails.
-      console.error("Payment Error:", error);
-      alert("Payment failed. Please try again later.");
-    });
+  .post("http://localhost:3000/payments", paymentData)
+  .then((response) => {
+    // Clear existing cart after successful payment
+    localStorage.removeItem("cart");
+    
+    // Redirect to success page
+    window.location.href = "payment_success.html";
+  })
+  .catch((error) => {
+    console.error("Payment Error:", error);
+    alert("Payment failed. Please try again later.");
+  });
 });
 
 // --- Add to Cart Feature ---
