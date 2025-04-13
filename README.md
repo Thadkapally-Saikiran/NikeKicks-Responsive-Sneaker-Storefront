@@ -16,6 +16,21 @@ Welcome to **NikeKicks**, a stylish and responsive eCommerce frontend project th
 - 🎨 Fully responsive design using custom CSS
 - 📦 **Data Persistence** using JSON server (`db.json`)
 
+## Technologies Used 🛠️
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- Axios
+- JSON Server (Local REST API)
+
+📌 Use Case
+This project is ideal for showcasing:
+
+- Frontend development skills
+- UI/UX design principles
+- API integration using JSON server
+- eCommerce web app simulations
+
 ---
 
 ## 📁 Project Structure
